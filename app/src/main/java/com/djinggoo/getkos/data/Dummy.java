@@ -1,9 +1,13 @@
 package com.djinggoo.getkos.data;
 
+import java.util.Arrays;
+import java.util.List;
+
 public class Dummy {
 
-    public static String[] getAreaItems(){
-     return new String[]{
+
+    public static List<String> getAreaItems(){
+     String[] data = new String[]{
                 "arcamanik", "babakan ciparay", "bandung kidul", "bandung wetan", "bantul",
                 "banyumanik", "batu", "batununggal", "blimbing", "bojongloa kidul", "buahbatu",
                 "cibeunying kaler", "cicendo", "cidadap", "cilandak", "coblong", "depok",
@@ -17,18 +21,24 @@ public class Dummy {
                 "singosari", "sukajadi", "sukolilo", "sukun", "tambaksari", "tanah abang", "tanjung priok",
                 "tebet", "tegalrejo", "tegalsari", "tembalang", "umbulharjo", "waru", "wiyung", "wonocolo", "wonokromo"
         };
+
+     return Arrays.asList(data);
     }
 
-    public static String[] getTypeItems(){
-        return new String[]{
+    public static List<String> getTypeItems(){
+        String[] data = new String[]{
                 "Campur", "Putra", "Putri"
         };
+
+        return Arrays.asList(data);
     }
 
-    public static String[] getCityItems(){
-        return new String[]{
+    public static List<String> getCityItems(){
+        String[] data = new String[]{
                 "Bandung", "Jakarta", "Yogyakarta", "Malang", "Semarang", "Surabaya"
         };
+
+        return Arrays.asList(data);
     }
 
 }

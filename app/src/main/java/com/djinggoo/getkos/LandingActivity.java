@@ -4,28 +4,26 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.ImageView;
+import android.os.Handler;
 
-public class LandingActivity extends AppCompatActivity implements View.OnClickListener{
+public class LandingActivity extends AppCompatActivity {
+
+    private Long splashTime = 300L;
+    private Handler handler;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_landing);
 
-        ImageView logo = findViewById(R.id.getkos_logo);
-
-        logo.setOnClickListener(this);
+        handler = new Handler();
+        handler.postDelayed(() -> gotoPredictionView(), splashTime);
     }
 
-    @Override
-    public void onClick(View view) {
-        switch (view.getId()){
-            case R.id.getkos_logo :
-                Intent activityPredictionIntent = new Intent(LandingActivity.this, PredictionActivity.class);
-                startActivity(activityPredictionIntent);
-                break;
-        }
+    private void gotoPredictionView(){
+        Intent activityPredictionIntent = new Intent(LandingActivity.this, PredictionActivity.class);
+        startActivity(activityPredictionIntent);
+        finish();
     }
+
 }

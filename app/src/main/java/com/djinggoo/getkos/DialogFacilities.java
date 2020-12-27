@@ -4,6 +4,7 @@ import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.os.Bundle;
+import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.CheckBox;
@@ -29,20 +30,14 @@ public class DialogFacilities extends AppCompatDialogFragment {
         View view = inflater.inflate(R.layout.layout_facilities, null);
 
         builder.setView(view)
-                .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
+                .setNegativeButton(Html.fromHtml("<font color='#000000'>Cancel</font>"), (dialogInterface, i) -> {
 
-                    }
                 })
-                .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        Float bathroomVal = checkBoxBathroom.isChecked() ? 2f : 0f;
-                        Float accessVal = checkBoxFreeAccess.isChecked() ? 2f : 0f;
-                        Float wifiVal = checkBoxWifi.isChecked() ? 2f : 0f;
-                        listener.applySelection(bathroomVal, accessVal, wifiVal);
-                    }
+                .setPositiveButton(Html.fromHtml("<font color='#000000'>Select</font>"), (dialogInterface, i) -> {
+                    Float bathroomVal = checkBoxBathroom.isChecked() ? 2f : 0f;
+                    Float accessVal = checkBoxFreeAccess.isChecked() ? 2f : 0f;
+                    Float wifiVal = checkBoxWifi.isChecked() ? 2f : 0f;
+                    listener.applySelection(bathroomVal, accessVal, wifiVal);
                 });
 
         checkBoxBathroom = view.findViewById(R.id.checkbox_bathroom);

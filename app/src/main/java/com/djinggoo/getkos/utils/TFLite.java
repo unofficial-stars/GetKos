@@ -13,7 +13,7 @@ import java.nio.channels.FileChannel;
 public class TFLite {
 
     private Interpreter interpreter;
-    private String MODEL_PATH = "model_getkos_regression.tflite";
+    private String MODEL_PATH = "model_getkos_regression-0.0.3.tflite";
 
     public TFLite(AssetManager assetManager){
         Interpreter.Options options = new Interpreter.Options();

@@ -4,6 +4,8 @@
     <string name="area">Area</string>
     <string name="type_kos">Tipe Kos</string>
     <string name="select_facilities">Pilih fasilitas</string>
-    <string name="predict">Prediksi Harga</string>
-    <string name="facilities">Fasilitas :</string>
+    <string name="predict">Predict</string>
+    <string name="facilities">Facilities</string>
+    <string name="navigation_drawer_open">Navigation Drawer Open</string>
+    <string name="navigation_drawer_close">Navigation Drawer Close</string>
 </resources>
