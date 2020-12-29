@@ -48,12 +48,13 @@ public class PredictionActivity extends AppCompatActivity
 
     private TFLite tfLite;
 
+    ArrayAdapter<String> adapterAreaItems = null;
+    List<String> areas;
+
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_prediction);
-
-        ArrayList<String> data = getIntent().getStringArrayListExtra("cities");
 
         Button buttonSelectFacilities = findViewById(R.id.btn_select_facilities);
         Button buttonCalculate = findViewById(R.id.btn_calculate);
@@ -70,14 +71,15 @@ public class PredictionActivity extends AppCompatActivity
         buttonSelectFacilities.setOnClickListener(view -> openDialogFacilities());
 
         List<String> cities = Dummy.getCityItems();
-        List<String> areas = Dummy.getAreaItems();
+        areas = Dummy.getAreaItems();
         List<String> types = Dummy.getTypeItems();
-
         buttonCalculate.setOnClickListener(view -> {
 
-            Integer cityValue = cities.indexOf(dropdownCityItems.getText().toString())+1;
-            Integer areaValue = areas.indexOf(dropdownAreaItems.getText().toString())+1;
-            Integer typeValue = types.indexOf(dropdownTypeItems.getText().toString())+1;
+            String data = dropdownAreaItems.getText().toString();
+
+            Integer cityValue = cities.indexOf(dropdownCityItems.getText().toString()) + 1;
+            Integer areaValue = areas.indexOf(dropdownAreaItems.getText().toString()) + 1;
+            Integer typeValue = types.indexOf(dropdownTypeItems.getText().toString()) + 1;
 
             Integer inferenceVal = (int) Math.ceil(doInference(cityValue, areaValue, typeValue, isBathroomSelected, isWifiSelected, isAccessSelected));
             Integer hundredRoundUp = 0;
@@ -94,12 +96,6 @@ public class PredictionActivity extends AppCompatActivity
                 cities
         );
 
-        ArrayAdapter<String> adapterAreaItems = new ArrayAdapter<>(
-                PredictionActivity.this,
-                R.layout.area_items,
-                areas
-        );
-
         ArrayAdapter<String> adapterTypeItems = new ArrayAdapter<>(
                 PredictionActivity.this,
                 R.layout.type_kos_items,
@@ -107,7 +103,30 @@ public class PredictionActivity extends AppCompatActivity
         );
 
         dropdownCityItems.setAdapter(adapterCityItems);
-        dropdownAreaItems.setAdapter(adapterAreaItems);
+        dropdownCityItems.setOnFocusChangeListener((view, b) -> {
+            if (!view.hasFocus()) {
+                String city = dropdownCityItems.getText().toString();
+                if (!Dummy.getCityItems().contains(city)) {
+                    Toast.makeText(getApplicationContext(), "Pilih Kota Yang Sesuai!", Toast.LENGTH_SHORT).show();
+                    areas = new ArrayList<>();
+                } else {
+                    if (city.equalsIgnoreCase("bandung")) areas = Dummy.getBandungAreaItems();
+                    else if (city.equalsIgnoreCase("yogyakarta")) areas = Dummy.getJogjaAreaItems();
+                    else if (city.equalsIgnoreCase("jakarta")) areas = Dummy.getjakartaAreaItems();
+                    else if (city.equalsIgnoreCase("malang")) areas = Dummy.getMalangAreaItems();
+                    else if (city.equalsIgnoreCase("semarang"))
+                        areas = Dummy.getSemarangAreaItems();
+                    else if (city.equalsIgnoreCase("surabaya"))
+                        areas = Dummy.getSurabayaAreaItems();
+                }
+                adapterAreaItems = new ArrayAdapter<>(PredictionActivity.this, R.layout.area_items, areas);
+                dropdownAreaItems.setAdapter(adapterAreaItems);
+            }
+        });
+
+//        ArrayAdapter<String>
+
+
         dropdownTypeItems.setAdapter(adapterTypeItems);
 
 //        Toolbar
@@ -124,7 +143,7 @@ public class PredictionActivity extends AppCompatActivity
         tfLite = new TFLite(getAssets());
     }
 
-    public void openDialogFacilities(){
+    public void openDialogFacilities() {
         DialogFacilities dialogFacilities = new DialogFacilities();
         dialogFacilities.show(getSupportFragmentManager(), "Dialog Facilities");
     }
@@ -132,15 +151,23 @@ public class PredictionActivity extends AppCompatActivity
     @Override
     public void applySelection(Float bathroomVal, Float wifiVal, Float accessVal) {
         String facilities = "Fasilitas : ";
-        if (bathroomVal != 0) facilities += "Kamar Mandi Dalam, ";
-        if (wifiVal != 0) facilities += "Wifi, ";
-        if (accessVal != 0) facilities += "Akses 24 Jam ";
+        if (bathroomVal != 0) {
+            facilities += "Kamar Mandi Dalam";
+            if ((wifiVal != 0) || (accessVal != 0)) facilities += ", ";
+        }
+        if (wifiVal != 0) {
+            facilities += "Wifi";
+            if ((accessVal != 0)) facilities += ", ";
+        }
+        if (accessVal != 0) {
+            facilities += "Akses 24 Jam";
+        }
 
-        textFacilities.setText(facilities);
+        textFacilities.setText(facilities + ".");
     }
 
-    private Float doInference(Integer cityValue, Integer areaValue, Integer typeValue, Boolean isBathroomSelected, Boolean isWifiSelected, Boolean isAccessSelected){
-        if (cityValue == 0){
+    private Float doInference(Integer cityValue, Integer areaValue, Integer typeValue, Boolean isBathroomSelected, Boolean isWifiSelected, Boolean isAccessSelected) {
+        if (cityValue == 0) {
             Toast.makeText(getApplicationContext(), "Pilih Kota Yang Sesuai!", Toast.LENGTH_SHORT).show();
             return 0f;
         }
@@ -165,14 +192,14 @@ public class PredictionActivity extends AppCompatActivity
     public void onBackPressed() {
         if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
             drawerLayout.closeDrawer(GravityCompat.START);
-        }else {
+        } else {
             super.onBackPressed();
         }
     }
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-        switch (item.getItemId()){
+        switch (item.getItemId()) {
             case R.id.nav_prediction:
                 break;
             case R.id.nav_bookmark:

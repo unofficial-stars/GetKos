@@ -37,7 +37,7 @@ public class DialogFacilities extends AppCompatDialogFragment {
                     Float bathroomVal = checkBoxBathroom.isChecked() ? 2f : 0f;
                     Float accessVal = checkBoxFreeAccess.isChecked() ? 2f : 0f;
                     Float wifiVal = checkBoxWifi.isChecked() ? 2f : 0f;
-                    listener.applySelection(bathroomVal, accessVal, wifiVal);
+                    listener.applySelection(bathroomVal, wifiVal, accessVal);
                 });
 
         checkBoxBathroom = view.findViewById(R.id.checkbox_bathroom);
