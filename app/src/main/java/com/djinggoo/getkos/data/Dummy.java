@@ -41,4 +41,19 @@ public class Dummy {
         return Arrays.asList(data);
     }
 
+    public static List<String> getBandungAreaItems(){
+        String[] data = new String[]{
+                "Bandung kota", "cimahi", "jalan ITB"
+        };
+        return Arrays.asList(data);
+    }
+
+
+    public static List<String> getMalangAreaItems(){
+        String[] data = new String[]{
+                "Lowokwaru", "singosari", "Mojolangu", "Batu"
+        };
+        return Arrays.asList(data);
+    }
+
 }

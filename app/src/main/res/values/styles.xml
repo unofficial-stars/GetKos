@@ -24,5 +24,10 @@
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
         <item name="android:windowDisablePreview">true</item>
+        <item name="android:statusBarColor">@color/colorWhite</item>
+    </style>
+
+    <style name="AppTheme.DefaultStatusBar" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="android:statusBarColor">@color/colorBlueIvy</item>
     </style>
 </resources>
