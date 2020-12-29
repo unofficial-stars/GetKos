@@ -2,7 +2,6 @@
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:theme="@style/AppTheme.SplashScreen"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".LandingActivity">
@@ -12,8 +11,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:padding="65dp"
-        android:src="@mipmap/logo"
-        android:scaleType="fitCenter"/>
+        android:src="@mipmap/mango_256"
+        android:scaleType="fitCenter"
 
- </RelativeLayout>
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello :)"
+        android:layout_below="@id/getkos_logo"
+        android:layout_centerInParent="true"
+        android:textSize="40dp"
+        />
+
+  </RelativeLayout>
