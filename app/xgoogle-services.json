@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "386285278365",
+    "firebase_url": "https://getkos-isawesome.firebaseio.com",
+    "project_id": "getkos-isawesome",
+    "storage_bucket": "getkos-isawesome.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:386285278365:android:116243ba8a55dce7b87074",
+        "android_client_info": {
+          "package_name": "com.djinggoo.getkos"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "386285278365-g43snda6vaqnsvsvaa23bc0s6usm7lle.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAsjB6ZQ_kLIV9-9wrvucmqe5dZlUmEMw4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "386285278365-g43snda6vaqnsvsvaa23bc0s6usm7lle.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:386285278365:android:eda2794fc8efec3fb87074",
+        "android_client_info": {
+          "package_name": "com.unoffstars.predict"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "386285278365-g43snda6vaqnsvsvaa23bc0s6usm7lle.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAsjB6ZQ_kLIV9-9wrvucmqe5dZlUmEMw4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "386285278365-g43snda6vaqnsvsvaa23bc0s6usm7lle.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
