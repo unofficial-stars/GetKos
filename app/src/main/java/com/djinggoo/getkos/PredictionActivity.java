@@ -2,6 +2,8 @@ package com.djinggoo.getkos;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
@@ -44,13 +46,6 @@ public class PredictionActivity extends AppCompatActivity
     private NavigationView navigationView;
     private Toolbar toolbar;
 
-
-    /* please delete me if u finishing the problem */
-    private ImageView imageViewFb;
-    private ImageView imageViewInst;
-    private ImageView imageViewTw;
-
-
     private TFLite tfLite;
 
     @Override
@@ -72,24 +67,6 @@ public class PredictionActivity extends AppCompatActivity
         navigationView = findViewById(R.id.nav_view);
         toolbar = findViewById(R.id.toolbar);
 
-        imageViewFb = findViewById(R.id.ximg_facebook_icon);
-        imageViewFb.setOnClickListener(view ->{
-            Intent intent = new Intent(PredictionActivity.this, AboutActivity.class);
-            startActivity(intent);
-        });
-
-        imageViewInst = findViewById(R.id.ximg_instagram_icon);
-        imageViewInst.setOnClickListener(view -> {
-            Intent intent = new Intent(PredictionActivity.this, HelpCenterAcitivity.class);
-            startActivity(intent);
-        });
-
-        imageViewTw = findViewById(R.id.ximg_twitter_icon);
-        imageViewTw.setOnClickListener(view -> {
-            Intent intent = new Intent(PredictionActivity.this, BookmarkActivity.class);
-            startActivity(intent);
-        });
-
         buttonSelectFacilities.setOnClickListener(view -> openDialogFacilities());
 
         List<String> cities = Dummy.getCityItems();
@@ -103,8 +80,10 @@ public class PredictionActivity extends AppCompatActivity
             Integer typeValue = types.indexOf(dropdownTypeItems.getText().toString())+1;
 
             Integer inferenceVal = (int) Math.ceil(doInference(cityValue, areaValue, typeValue, isBathroomSelected, isWifiSelected, isAccessSelected));
-            String result = "Rp. " + (inferenceVal.toString()) + " / month";
+            Integer hundredRoundUp = 0;
+            if (inferenceVal != 0) hundredRoundUp = (100 - (inferenceVal % 100)) + inferenceVal;
 
+            String result = "Rp. " + (hundredRoundUp.toString()) + " / month";
             resultTextInput.setText(result);
 
         });
@@ -135,9 +114,11 @@ public class PredictionActivity extends AppCompatActivity
         setSupportActionBar(toolbar);
 
 //        navigation drawer menu
+        navigationView.bringToFront();
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
+        navigationView.setNavigationItemSelectedListener(this);
         navigationView.setCheckedItem(R.id.nav_prediction);
 
         tfLite = new TFLite(getAssets());
@@ -188,7 +169,6 @@ public class PredictionActivity extends AppCompatActivity
             super.onBackPressed();
         }
     }
-
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {

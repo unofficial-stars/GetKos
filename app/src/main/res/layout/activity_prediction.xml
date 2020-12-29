@@ -173,29 +173,5 @@
             android:src="@drawable/bookmark_32"
             android:layout_toEndOf="@id/layout_txtinput_result"/>
 
-        <LinearLayout
-            android:paddingTop="10dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/bookmark_icon"
-            android:layout_centerHorizontal="true">
-            <ImageView
-                android:id="@+id/ximg_facebook_icon"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingRight="30dp"
-                android:src="@mipmap/facebook_icon"/>
-            <ImageView
-                android:id="@+id/ximg_instagram_icon"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@mipmap/instagram_icon"/>
-            <ImageView
-                android:id="@+id/ximg_twitter_icon"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingLeft="30dp"
-                android:src="@mipmap/twitter_icon"/>
-        </LinearLayout>
     </RelativeLayout>
 </androidx.drawerlayout.widget.DrawerLayout>

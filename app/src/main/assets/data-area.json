@@ -3,397 +3,397 @@
       {
          "name":"antapani",
          "value":1,
-         "kota":"bandung"
+         "city":"bandung"
       },
       {
          "name":"astanaanyar",
          "value":2,
-         "kota":"bandung"
+         "city":"bandung"
       },
       {
          "name":"babakan ciparay",
          "value":3,
-         "kota":"bandung"
+         "city":"bandung"
       },
       {
          "name":"bandung wetan",
          "value":4,
-         "kota":"bandung"
+         "city":"bandung"
       },
       {
          "name":"banjarsari",
          "value":5,
-         "kota":"jogja"
+         "city":"jogja"
       },
       {
          "name":"banyumanik",
          "value":6,
-         "kota":"semarang"
+         "city":"semarang"
       },
       {
          "name":"batu",
          "value":7,
-         "kota":"malang"
+         "city":"malang"
       },
       {
          "name":"bekasi selatan",
          "value":8,
-         "kota":"jogja"
+         "city":"jogja"
       },
       {
          "name":"blimbing",
          "value":9,
-         "kota":"malang"
+         "city":"malang"
       },
       {
          "name":"bojongloa kidul",
          "value":10,
-         "kota":"bandung"
+         "city":"bandung"
       },
       {
          "name":"buahbatu",
          "value":11,
-         "kota":"bandung"
+         "city":"bandung"
       },
       {
          "name":"cibeunying kaler",
          "value":12,
-         "kota":"bandung"
+         "city":"bandung"
       },
       {
          "name":"cibeunying kidul",
          "value":13,
-         "kota":"bandung"
+         "city":"bandung"
       },
       {
          "name":"cicendo",
          "value":14,
-         "kota":"bandung"
+         "city":"bandung"
       },
       {
          "name":"cilandak",
          "value":15,
-         "kota":"jakarta"
+         "city":"jakarta"
       },
       {
          "name":"coblong",
          "value":16,
-         "kota":"bandung"
+         "city":"bandung"
       },
       {
          "name":"danurejan",
          "value":17,
-         "kota":"jogja"
+         "city":"jogja"
       },
       {
          "name":"depok",
          "value":18,
-         "kota":"jogja"
+         "city":"jogja"
       },
       {
          "name":"dukuhpakis",
          "value":19,
-         "kota":"surabaya"
+         "city":"surabaya"
       },
       {
          "name":"duren sawit",
          "value":20,
-         "kota":"jakarta"
+         "city":"jakarta"
       },
       {
          "name":"gajahmungkur",
          "value":21,
-         "kota":"semarang"
+         "city":"semarang"
       },
       {
          "name":"gayamsari",
          "value":22,
-         "kota":"semarang"
+         "city":"semarang"
       },
       {
          "name":"gayungan",
          "value":23,
-         "kota":"surabaya"
+         "city":"surabaya"
       },
       {
          "name":"gedong tengen",
          "value":24,
-         "kota":"jogja"
+         "city":"jogja"
       },
       {
          "name":"genuk",
          "value":25,
-         "kota":"semarang"
+         "city":"semarang"
       },
       {
          "name":"godean",
          "value":26,
-         "kota":"jogja"
+         "city":"jogja"
       },
       {
          "name":"gondokusuman",
          "value":27,
-         "kota":"jogja"
+         "city":"jogja"
       },
       {
          "name":"gondomanan",
          "value":28,
-         "kota":"jogja"
+         "city":"jogja"
       },
       {
          "name":"grogol petamburan",
          "value":29,
-         "kota":"jakarta"
+         "city":"jakarta"
       },
       {
          "name":"gubeng",
          "value":30,
-         "kota":"surabaya"
+         "city":"surabaya"
       },
       {
          "name":"jatinangor",
          "value":31,
-         "kota":"bandung"
+         "city":"bandung"
       },
       {
          "name":"jetis",
          "value":32,
-         "kota":"jogja"
+         "city":"jogja"
       },
       {
          "name":"kebayoran baru",
          "value":33,
-         "kota":"jakarta"
+         "city":"jakarta"
       },
       {
          "name":"kelapa gading",
          "value":34,
-         "kota":"jakarta"
+         "city":"jakarta"
       },
       {
          "name":"kemayoran",
          "value":35,
-         "kota":"jakarta"
+         "city":"jakarta"
       },
       {
          "name":"kepanjen",
          "value":36,
-         "kota":"malang"
+         "city":"malang"
       },
       {
          "name":"kiaracondong",
          "value":37,
-         "kota":"bandung"
+         "city":"bandung"
       },
       {
          "name":"klojen",
          "value":38,
-         "kota":"malang"
+         "city":"malang"
       },
       {
          "name":"lengkong",
          "value":39,
-         "kota":"bandung"
+         "city":"bandung"
       },
       {
          "name":"lowokwaru",
          "value":40,
-         "kota":"malang"
+         "city":"malang"
       },
       {
          "name":"menteng",
          "value":41,
-         "kota":"jakarta"
+         "city":"jakarta"
       },
       {
          "name":"mergangsan",
          "value":42,
-         "kota":"jogja"
+         "city":"jogja"
       },
       {
          "name":"mlati",
          "value":43,
-         "kota":"jogja"
+         "city":"jogja"
       },
       {
          "name":"ngaglik",
          "value":44,
-         "kota":"jogja"
+         "city":"jogja"
       },
       {
          "name":"ngaliyan",
          "value":45,
-         "kota":"semarang"
+         "city":"semarang"
       },
       {
          "name":"ngampilan",
          "value":46,
-         "kota":"jogja"
+         "city":"jogja"
       },
       {
          "name":"ngemplak",
          "value":47,
-         "kota":"jogja"
+         "city":"jogja"
       },
       {
          "name":"pakualaman",
          "value":48,
-         "kota":"jogja"
+         "city":"jogja"
       },
       {
          "name":"palmerah",
          "value":49,
-         "kota":"jakarta"
+         "city":"jakarta"
       },
       {
          "name":"pancoran",
          "value":50,
-         "kota":"jakarta"
+         "city":"jakarta"
       },
       {
          "name":"pasar minggu",
          "value":51,
-         "kota":"jakarta"
+         "city":"jakarta"
       },
       {
          "name":"pedurungan",
          "value":52,
-         "kota":"semarang"
+         "city":"semarang"
       },
       {
          "name":"regol",
          "value":53,
-         "kota":"bandung"
+         "city":"bandung"
       },
       {
          "name":"rungkut",
          "value":54,
-         "kota":"surabaya"
+         "city":"surabaya"
       },
       {
          "name":"sedati",
          "value":55,
-         "kota":"surabaya"
+         "city":"surabaya"
       },
       {
          "name":"semarang selatan",
          "value":56,
-         "kota":"semarang"
+         "city":"semarang"
       },
       {
          "name":"semarang tengah",
          "value":57,
-         "kota":"semarang"
+         "city":"semarang"
       },
       {
          "name":"semarang timur",
          "value":58,
-         "kota":"semarang"
+         "city":"semarang"
       },
       {
          "name":"semarang utara",
          "value":59,
-         "kota":"semarang"
+         "city":"semarang"
       },
       {
          "name":"senen",
          "value":60,
-         "kota":"jakarta"
+         "city":"jakarta"
       },
       {
          "name":"serpong",
          "value":61,
-         "kota":"jakarta"
+         "city":"jakarta"
       },
       {
          "name":"setiabudi",
          "value":62,
-         "kota":"jakarta"
+         "city":"jakarta"
       },
       {
          "name":"singosari",
          "value":63,
-         "kota":"malang"
+         "city":"malang"
       },
       {
          "name":"sukajadi",
          "value":64,
-         "kota":"bandung"
+         "city":"bandung"
       },
       {
          "name":"sukasari",
          "value":65,
-         "kota":"bandung"
+         "city":"bandung"
       },
       {
          "name":"sukolilo",
          "value":66,
-         "kota":"surabaya"
+         "city":"surabaya"
       },
       {
          "name":"sukun",
          "value":67,
-         "kota":"malang"
+         "city":"malang"
       },
       {
          "name":"tambaksari",
          "value":68,
-         "kota":"surabaya"
+         "city":"surabaya"
       },
       {
          "name":"tambora",
          "value":69,
-         "kota":"jakarta"
+         "city":"jakarta"
       },
       {
          "name":"tanah abang",
          "value":70,
-         "kota":"jakarta"
+         "city":"jakarta"
       },
       {
          "name":"tebet",
          "value":71,
-         "kota":"jakarta"
+         "city":"jakarta"
       },
       {
          "name":"tegalsari",
          "value":72,
-         "kota":"surabaya"
+         "city":"surabaya"
       },
       {
          "name":"tembalang",
          "value":73,
-         "kota":"semarang"
+         "city":"semarang"
       },
       {
          "name":"umbulharjo",
          "value":74,
-         "kota":"jogja"
+         "city":"jogja"
       },
       {
          "name":"ungaran barat",
          "value":75,
-         "kota":"semarang"
+         "city":"semarang"
       },
       {
          "name":"ungaran timur",
          "value":76,
-         "kota":"semarang"
+         "city":"semarang"
       },
       {
          "name":"waru",
          "value":77,
-         "kota":"surabaya"
+         "city":"surabaya"
       },
       {
          "name":"wiyung",
          "value":78,
-         "kota":"surabaya"
+         "city":"surabaya"
       },
       {
          "name":"wonokromo",
          "value":79,
-         "kota":"surabaya"
+         "city":"surabaya"
       }
    ]
 }
