@@ -2,6 +2,7 @@ package com.djinggoo.getkos;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -49,7 +50,7 @@ public class PredictionActivity extends AppCompatActivity
     private TFLite tfLite;
 
     ArrayAdapter<String> adapterAreaItems = null;
-    List<String> areas;
+    List<String> dynamicAreas;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -71,11 +72,9 @@ public class PredictionActivity extends AppCompatActivity
         buttonSelectFacilities.setOnClickListener(view -> openDialogFacilities());
 
         List<String> cities = Dummy.getCityItems();
-        areas = Dummy.getAreaItems();
+        List<String> areas = Dummy.getAreaItems();
         List<String> types = Dummy.getTypeItems();
         buttonCalculate.setOnClickListener(view -> {
-
-            String data = dropdownAreaItems.getText().toString();
 
             Integer cityValue = cities.indexOf(dropdownCityItems.getText().toString()) + 1;
             Integer areaValue = areas.indexOf(dropdownAreaItems.getText().toString()) + 1;
@@ -105,26 +104,29 @@ public class PredictionActivity extends AppCompatActivity
         dropdownCityItems.setAdapter(adapterCityItems);
         dropdownCityItems.setOnFocusChangeListener((view, b) -> {
             if (!view.hasFocus()) {
+                dropdownAreaItems.setText("");
                 String city = dropdownCityItems.getText().toString();
                 if (!Dummy.getCityItems().contains(city)) {
                     Toast.makeText(getApplicationContext(), "Pilih Kota Yang Sesuai!", Toast.LENGTH_SHORT).show();
-                    areas = new ArrayList<>();
+                    dynamicAreas = new ArrayList<>();
                 } else {
-                    if (city.equalsIgnoreCase("bandung")) areas = Dummy.getBandungAreaItems();
-                    else if (city.equalsIgnoreCase("yogyakarta")) areas = Dummy.getJogjaAreaItems();
-                    else if (city.equalsIgnoreCase("jakarta")) areas = Dummy.getjakartaAreaItems();
-                    else if (city.equalsIgnoreCase("malang")) areas = Dummy.getMalangAreaItems();
+                    if (city.equalsIgnoreCase("bandung"))
+                        dynamicAreas = Dummy.getBandungAreaItems();
+                    else if (city.equalsIgnoreCase("yogyakarta"))
+                        dynamicAreas = Dummy.getJogjaAreaItems();
+                    else if (city.equalsIgnoreCase("jakarta"))
+                        dynamicAreas = Dummy.getjakartaAreaItems();
+                    else if (city.equalsIgnoreCase("malang"))
+                        dynamicAreas = Dummy.getMalangAreaItems();
                     else if (city.equalsIgnoreCase("semarang"))
-                        areas = Dummy.getSemarangAreaItems();
+                        dynamicAreas = Dummy.getSemarangAreaItems();
                     else if (city.equalsIgnoreCase("surabaya"))
-                        areas = Dummy.getSurabayaAreaItems();
+                        dynamicAreas = Dummy.getSurabayaAreaItems();
                 }
-                adapterAreaItems = new ArrayAdapter<>(PredictionActivity.this, R.layout.area_items, areas);
+                adapterAreaItems = new ArrayAdapter<>(PredictionActivity.this, R.layout.area_items, dynamicAreas);
                 dropdownAreaItems.setAdapter(adapterAreaItems);
             }
         });
-
-//        ArrayAdapter<String>
 
 
         dropdownTypeItems.setAdapter(adapterTypeItems);
@@ -150,9 +152,9 @@ public class PredictionActivity extends AppCompatActivity
 
     @Override
     public void applySelection(Float bathroomVal, Float wifiVal, Float accessVal) {
-        String facilities = "Fasilitas : ";
+        String facilities = "Facilities : ";
         if (bathroomVal != 0) {
-            facilities += "Kamar Mandi Dalam";
+            facilities += "Bathroom inside";
             if ((wifiVal != 0) || (accessVal != 0)) facilities += ", ";
         }
         if (wifiVal != 0) {
@@ -160,7 +162,7 @@ public class PredictionActivity extends AppCompatActivity
             if ((accessVal != 0)) facilities += ", ";
         }
         if (accessVal != 0) {
-            facilities += "Akses 24 Jam";
+            facilities += "24 hour access";
         }
 
         textFacilities.setText(facilities + ".");
@@ -209,10 +211,12 @@ public class PredictionActivity extends AppCompatActivity
             case R.id.nav_help_center:
                 Intent iHelpCenter = new Intent(PredictionActivity.this, HelpCenterAcitivity.class);
                 startActivity(iHelpCenter);
+                onResume();
                 break;
             case R.id.nav_about:
                 Intent iAbout = new Intent(PredictionActivity.this, AboutActivity.class);
                 startActivity(iAbout);
+                onResume();
                 break;
         }
 
@@ -220,4 +224,13 @@ public class PredictionActivity extends AppCompatActivity
         return true;
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Log.i("TAG", "ON RESUME");
+
+        navigationView.setCheckedItem(R.id.nav_prediction);
+//        navigationView.chec
+
+    }
 }

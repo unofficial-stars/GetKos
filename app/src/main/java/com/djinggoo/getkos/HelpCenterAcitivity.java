@@ -74,6 +74,8 @@ public class HelpCenterAcitivity extends AppCompatActivity implements Navigation
             case R.id.nav_prediction:
                 Intent iPrediction = new Intent(HelpCenterAcitivity.this, PredictionActivity.class);
                 startActivity(iPrediction);
+
+                finish();
                 break;
             case R.id.nav_bookmark:
                 Intent iBookmark = new Intent(HelpCenterAcitivity.this, BookmarkActivity.class);
@@ -84,6 +86,7 @@ public class HelpCenterAcitivity extends AppCompatActivity implements Navigation
             case R.id.nav_about:
                 Intent iAbout = new Intent(HelpCenterAcitivity.this, AboutActivity.class);
                 startActivity(iAbout);
+                finish();
                 break;
         }
 

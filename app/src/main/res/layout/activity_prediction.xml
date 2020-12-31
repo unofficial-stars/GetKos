@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@mipmap/prediction_bcgrnd"
-    android:fitsSystemWindows="true"
+    android:fitsSystemWindows="true"    
     tools:context=".PredictionActivity">
 
     <com.google.android.material.navigation.NavigationView
@@ -144,14 +144,12 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             app:boxStrokeColor="@null"
             app:boxBackgroundColor="@color/colorLightGray"
-            android:layout_width="280dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/btn_calculate"
             android:layout_marginLeft="50dp"
-            android:layout_marginTop="20dp"
-            android:paddingLeft="4dp"
-            android:paddingRight="4dp"
-            android:paddingBottom="4dp">
+            android:layout_marginRight="50dp"
+            android:layout_marginTop="20dp">
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/textinput_result"
                 android:layout_width="match_parent"
@@ -163,15 +161,15 @@
                 android:textAlignment="center" />
         </com.google.android.material.textfield.TextInputLayout>
 
-        <ImageView
-            android:id="@+id/bookmark_icon"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="50dp"
-            android:paddingBottom="15dp"
-            android:layout_alignBottom="@id/layout_txtinput_result"
-            android:src="@drawable/bookmark_32"
-            android:layout_toEndOf="@id/layout_txtinput_result"/>
+<!--        <ImageView-->
+<!--            android:id="@+id/bookmark_icon"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginRight="50dp"-->
+<!--            android:paddingBottom="15dp"-->
+<!--            android:layout_alignBottom="@id/layout_txtinput_result"-->
+<!--            android:src="@drawable/bookmark_32"-->
+<!--            android:layout_toEndOf="@id/layout_txtinput_result"/>-->
 
     </RelativeLayout>
 </androidx.drawerlayout.widget.DrawerLayout>

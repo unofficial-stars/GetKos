@@ -13,7 +13,7 @@
             android:id="@+id/checkbox_bathroom"
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
-            android:text="Kamar Mandi Dalam"
+            android:text="@string/bathroom_inside"
             android:buttonTint="@color/colorBlueIvy"/>
 
         <com.google.android.material.checkbox.MaterialCheckBox
@@ -21,7 +21,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/checkbox_bathroom"
-            android:text="Wifi"
+            android:text="@string/wifi"
             android:buttonTint="@color/colorBlueIvy"/>
 
         <com.google.android.material.checkbox.MaterialCheckBox
@@ -29,7 +29,7 @@
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
             android:layout_below="@id/checkbox_wifi"
-            android:text="Akses 24 Jam"
+            android:text="@string/access24"
             android:buttonTint="@color/colorBlueIvy"/>
 
     </RelativeLayout>

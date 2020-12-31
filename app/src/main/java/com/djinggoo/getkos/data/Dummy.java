@@ -9,17 +9,17 @@ public class Dummy {
 
     public static List<String> getAreaItems() {
         String[] data = new String[]{
-                "antapani", "astanaanyar", "babakan ciparay", "bandung wetan", "banjarsari", "banyumanik", "batu",
-                "bekasi selatan", "blimbing", "bojongloa kidul", "buahbatu", "cibeunying kaler", "cibeunying kidul",
-                "cicendo", "cilandak", "coblong", "danurejan", "depok", "dukuhpakis", "duren sawit", "gajahmungkur",
-                "gayamsari", "gayungan", "gedong tengen", "genuk", "godean", "gondokusuman", "gondomanan", "grogol petamburan",
-                "gubeng", "jatinangor", "jetis", "kebayoran baru", "kelapa gading", "kemayoran", "kepanjen",
-                "kiaracondong", "klojen", "lengkong", "lowokwaru", "menteng", "mergangsan", "mlati", "ngaglik",
-                "ngaliyan", "ngampilan", "ngemplak", "pakualaman", "palmerah","pancoran", "pasar minggu",
-                "pedurungan", "regol", "rungkut", "sedati", "semarang selatan", "semarang tengah", "semarang timur",
-                "semarang utara", "senen", "serpong", "setiabudi", "singosari", "sukajadi", "sukasari", "sukolilo",
-                "sukun", "tambaksari", "tambora", "tanah abang", "tebet", "tegalsari", "tembalang", "umbulharjo",
-                "ungaran barat", "ungaran timur", "waru", "wiyung", "wonokromo"
+                "Antapani", "Astanaanyar", "Babakan ciparay", "Bandung wetan", "Banjarsari", "Banyumanik", "Batu",
+                "Bekasi selatan", "Blimbing", "Bojongloa kidul", "Buahbatu", "Cibeunying kaler", "Cibeunying kidul",
+                "Cicendo", "Cilandak", "Coblong", "Danurejan", "Depok", "Dukuhpakis", "Duren sawit", "Gajahmungkur",
+                "Gayamsari", "Gayungan", "Gedong tengen", "Genuk", "Godean", "Gondokusuman", "Gondomanan", "Grogol petamburan",
+                "Gubeng", "Jatinangor", "Jetis", "Kebayoran baru", "Kelapa gading", "Kemayoran", "Kepanjen",
+                "Kiaracondong", "Klojen", "Lengkong", "Lowokwaru", "Menteng", "Mergangsan", "Mlati", "Ngaglik",
+                "Ngaliyan", "Ngampilan", "Ngemplak", "Pakualaman", "Palmerah","Pancoran", "Pasar minggu",
+                "Pedurungan", "Regol", "Rungkut", "Sedati", "Semarang selatan", "Semarang tengah", "Semarang timur",
+                "Semarang utara", "Senen", "Serpong", "Setiabudi", "Singosari", "Sukajadi", "Sukasari", "Sukolilo",
+                "Sukun", "Tambaksari", "Tambora", "Tanah abang", "Tebet", "Tegalsari", "Tembalang", "Umbulharjo",
+                "Ungaran barat", "Ungaran timur", "Waru", "Wiyung", "Wonokromo"
 
         };
 
@@ -28,9 +28,9 @@ public class Dummy {
 
     public static List<String> getBandungAreaItems() {
         String[] data = new String[]{
-                "antapani","astanaanyar","babakan ciparay","bandung wetan","bojongloa kidul",
-                "buahbatu","cibeunying kaler","cibeunying kidul","cicendo","coblong","jatinangor",
-                "kiaracondong","lengkong","regol","sukajadi","sukasari"
+                "Antapani","Astanaanyar","Babakan ciparay","Bandung wetan","Bojongloa kidul",
+                "Buahbatu","Cibeunying kaler","Cibeunying kidul","Cicendo","Coblong","Jatinangor",
+                "Kiaracondong","Lengkong","Regol","Sukajadi","Sukasari"
 
         };
         return Arrays.asList(data);
@@ -38,42 +38,42 @@ public class Dummy {
 
     public static List<String> getJogjaAreaItems() {
         String[] data = new String[]{
-                "banjarsari","bekasi selatan","danurejan","depok","gedong tengen","godean",
-                "gondokusuman","gondomanan","jetis","mlati","mergangsan","ngaglik","ngampilan",
-                "ngemplak","pakualaman","umbulharjo"
+                "Banjarsari","Danurejan","Depok","Gedong tengen","Godean",
+                "Gondokusuman","Gondomanan","Jetis","Mlati","Mergangsan","Ngaglik","Ngampilan",
+                "Ngemplak","Pakualaman","Umbulharjo"
         };
         return Arrays.asList(data);
     }
 
     public static List<String> getSemarangAreaItems() {
         String[] data = new String[]{
-                "banyumanik","gajahmungkur","genuk","kepanjen","ngaliyan","pedurungan",
-                "semarang selatan","semarang tengah","semarang timur","semarang utara",
-                "tembalang","ungaran barat","ungaran timur","gayamsari"
+                "Banyumanik","Gajahmungkur","Genuk","Kepanjen","Ngaliyan","Pedurungan",
+                "Semarang selatan","Semarang tengah","Semarang timur","Semarang utara",
+                "Tembalang","Ungaran barat","Ungaran timur","Gayamsari"
         };
         return Arrays.asList(data);
     }
 
     public static List<String> getjakartaAreaItems() {
         String[] data = new String[]{
-                "cilandak","duren sawit","grogol petamburan","kebayoran baru","kelapa gading",
-                "kemayoran","menteng","palmerah","pancoran","pasar minggu","senen","serpong",
-                "setiabudi","tambora","tanah abang"
+                "Cilandak","Duren sawit","Grogol petamburan","Kebayoran baru","Kelapa gading",
+                "Kemayoran","Menteng","Palmerah","Pancoran","Pasar minggu","Senen","Serpong",
+                "Setiabudi","Tambora", "Bekasi selatan", "Tanah abang"
         };
         return Arrays.asList(data);
     }
 
     public static List<String> getSurabayaAreaItems() {
         String[] data = new String[]{
-                "dukuhpakis","gayungan","gubeng","rungkut","sedati","sukolilo","tambaksari",
-                "tegalsari","waru","wiyung","wonokromo"
+                "Dukuhpakis","Gayungan","Gubeng","Rungkut","Sedati","Sukolilo","Tambaksari",
+                "Tegalsari","Waru","Wiyung","Wonokromo"
         };
         return Arrays.asList(data);
     }
 
     public static List<String> getMalangAreaItems() {
         String[] data = new String[]{
-                "batu","blimbing","kepanjen","klojen","lowokwaru","singosari","sukun"
+                "Batu","Blimbing","Kepanjen","Klojen","Lowokwaru","Singosari","Sukun"
         };
         return Arrays.asList(data);
     }
