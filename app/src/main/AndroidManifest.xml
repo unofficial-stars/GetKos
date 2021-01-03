@@ -12,7 +12,9 @@
         android:roundIcon="@mipmap/ic_getkost"
         android:supportsRtl="true"
         android:theme="@style/Theme.MaterialComponents.Light.NoActionBar" >
-        <activity android:name=".PredictionActivity" android:theme="@style/AppTheme.DefaultStatusBar"/>
+        <activity android:name=".PredictionActivity"
+            android:theme="@style/AppTheme.DefaultStatusBar"
+            android:launchMode="singleInstance"/>
         <activity android:name=".AboutActivity" android:theme="@style/AppTheme.DefaultStatusBar"/>
         <activity android:name=".BookmarkActivity" android:theme="@style/AppTheme.DefaultStatusBar"/>
         <activity android:name=".HelpCenterAcitivity" android:theme="@style/AppTheme.DefaultStatusBar"/>
@@ -20,7 +22,6 @@
             android:theme="@style/AppTheme.SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

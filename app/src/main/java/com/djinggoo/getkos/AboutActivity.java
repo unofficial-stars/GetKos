@@ -50,12 +50,14 @@ public class AboutActivity extends AppCompatActivity implements NavigationView.O
             case R.id.nav_prediction:
                 Intent iPrediction = new Intent(AboutActivity.this, PredictionActivity.class);
                 startActivity(iPrediction);
+                finish();
                 break;
             case R.id.nav_bookmark:
                 break;
             case R.id.nav_help_center:
                 Intent iHelpCenter = new Intent(AboutActivity.this, HelpCenterAcitivity.class);
                 startActivity(iHelpCenter);
+                finish();
                 break;
             case R.id.nav_about:
                 break;
